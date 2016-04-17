@@ -1,0 +1,25 @@
+{
+  "name": "nodesite",
+  "version": "1.0.0",
+  "description": "first attemp",
+  "main": "nodeSite.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yysc/nodePratice.git"
+  },
+  "keywords": [
+    "yy"
+  ],
+  "author": "yyue",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/yysc/nodePratice/issues"
+  },
+  "homepage": "https://github.com/yysc/nodePratice",
+  "dependencies": {
+    "express-handlebars": "^3.0.0"
+  }
+}
