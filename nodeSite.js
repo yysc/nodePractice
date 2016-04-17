@@ -1,15 +1,8 @@
 var express = require('express');
-
+var fortune = require('./lib/fortune.js');
 var app = express();
 app.use(express.static(__dirname + '/public'));
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
-var fortunes = [
-	"First cookie",
-	"second cookie",
-	"third cookie",
-	"forth cookie",
-	"fifth cookie"
-];
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
@@ -17,8 +10,7 @@ app.set('port', process.env.PORT || 3000);
 
 //404
 app.get('/about', function(req, res){
-	var cookie = fortunes[Math.floor(Math.random()*fortunes.length)];
-	res.render('about', {fortune : cookie});
+	res.render('about', {fortune : fortune.getFortune()});
 });
 
 app.get('/', function(req, res) {
